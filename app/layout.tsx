@@ -1,9 +1,8 @@
-"use client";
 import "./globals.css";
 import Footer from "./footer";
 import Providers from "./provider";
-import Navbar from "./navbar";
 import { Inter } from 'next/font/google'
+import Navbar from "@/components/navbar";
 
 
 const inter = Inter({
@@ -25,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Providers>
-          <Navbar />
+          <Navbar/>
           {children}
           <Footer />
         </Providers>

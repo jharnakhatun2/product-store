@@ -4,6 +4,7 @@ import ProductHero from "@/components/producthero";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { use } from "react";
 
 async function getProducts() {
   let res = await fetch(`https://fakestoreapi.com/products`);
@@ -13,9 +14,10 @@ async function getProducts() {
   return await res.json();
 }
 
-export default async function Product() {
+export default  function Product() {
   const router = useRouter();
-  let products = await getProducts();
+  //@ts-ignore
+  let products: ProductDataType[] =  use(getProducts());
 
   return (
     <div className="">

@@ -1,6 +1,7 @@
+'use client'
 import { ChangeEvent, useState } from "react";
 import { useDispatch } from "react-redux";
-import { setCurrency } from "./slices/useSlice";
+import { setCurrency } from "../app/slices/useSlice";
 import Image from "next/image";
 import { useAppSelector } from "@/store/hooks";
 
