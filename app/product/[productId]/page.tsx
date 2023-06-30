@@ -1,7 +1,5 @@
-
 import StarButton from "@/components/starbutton";
 import Image from "next/image";
-
 
 async function getProduct(id: string) {
   let res = await fetch(`https://fakestoreapi.com/products/${id}`);
@@ -20,7 +18,6 @@ export default async function Product({
 }) {
   const product = await getProduct(productId);
   const { title, price, description, category, image, rating } = product;
- 
 
   return (
     <>
@@ -42,15 +39,13 @@ export default async function Product({
               </strong>
               <div className="mt-8 flex justify-between">
                 <div className="max-w-[35ch] space-y-2">
-                  <h1 className="text-xl font-bold sm:text-2xl">
-                    {title}
-                  </h1>
+                  <h1 className="text-xl font-bold sm:text-2xl">{title}</h1>
                   <p className="text-sm">Category : {category}</p>
                   <div className="-ms-0.5 flex">
-                    <StarButton/>
-                    <StarButton/>
-                    <StarButton/>
-                    <StarButton/>
+                    <StarButton />
+                    <StarButton />
+                    <StarButton />
+                    <StarButton />
                     <svg
                       className="h-5 w-5 text-gray-200"
                       xmlns="http://www.w3.org/2000/svg"
@@ -60,8 +55,8 @@ export default async function Product({
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                     <h1 className="pl-1 text-sm text-gray-800 dark:text-white">
-                    (<span>{rating.count}</span> )
-                  </h1>
+                      (<span>{rating.count}</span> )
+                    </h1>
                   </div>
                   <h1 className="pl-1 text-sm text-gray-800 dark:text-white">
                     Ratings : <span>{rating.rate}</span>
@@ -71,9 +66,7 @@ export default async function Product({
               </div>
               <div className="mt-4">
                 <div className="prose max-w-none">
-                  <p>
-                    {description}
-                  </p>
+                  <p>{description}</p>
                 </div>
               </div>
               <form className="mt-8">
@@ -88,7 +81,7 @@ export default async function Product({
                         className="peer sr-only"
                       />
                       <span className="group inline-block rounded-full border px-3 py-1 text-xs font-medium peer-checked:bg-nature peer-checked:text-white">
-                      Grey
+                        Grey
                       </span>
                     </label>
                     <label htmlFor="color_fr" className="cursor-pointer">

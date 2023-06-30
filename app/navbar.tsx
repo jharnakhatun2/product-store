@@ -1,14 +1,15 @@
-import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { ChangeEvent, useState } from "react";
+import { useDispatch } from "react-redux";
 import { setCurrency } from "./slices/useSlice";
 import Image from "next/image";
+import { useAppSelector } from "@/store/hooks";
 
 export default function Navbar() {
   const dispatch = useDispatch();
-  const currency = useSelector((state) => state.currency.currency);
+  const currency = useAppSelector((state) => state.currency.currency);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const handleCurrencyChange = (event) => {
+  const handleCurrencyChange = (event: ChangeEvent<HTMLSelectElement>) => {
     const selectedCurrency = event.target.value;
     dispatch(setCurrency(selectedCurrency));
   };
@@ -56,6 +57,7 @@ export default function Navbar() {
             <div className="flex items-center gap-4">
               {/* Currency Switcher */}
               <div className="sm:flex sm:gap-4">
+                <form>
                 <div className="inset-y-0 right-0 flex items-center">
                   <label htmlFor="currency" className="sr-only">
                     Currency
@@ -73,6 +75,7 @@ export default function Navbar() {
                     <option value="GBP">GBP</option>
                   </select>
                 </div>
+                </form>
               </div>
               {/* Mobile Menu icon */}
               <div className="block md:hidden">

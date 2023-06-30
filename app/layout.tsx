@@ -3,7 +3,6 @@ import "./globals.css";
 import Footer from "./footer";
 import Providers from "./provider";
 import Navbar from "./navbar";
-import { store } from "@/store/store";
 import { Inter } from 'next/font/google'
 
 
@@ -25,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Providers store={store}>
+        <Providers>
           <Navbar />
           {children}
           <Footer />

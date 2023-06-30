@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { ProductDataType } from "./interfaces";
 
 async function getProducts() {
   let res = await fetch(`https://fakestoreapi.com/products`);
@@ -24,7 +25,7 @@ export default async function Features() {
           <hr className="w-[4%] mb-2 bg-primary h-1 border-0" />
           <h2 className="text-3xl font-bold text-gray-900">Our Collections</h2>
           <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
-            {allProduct?.map((obj) => {
+            {allProduct?.map((obj: ProductDataType) => {
               return (
                 <div
                   key={obj.id}

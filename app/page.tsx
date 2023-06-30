@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Hero from "@/components/hero";
-import Product from "./product/page";
 import Collections from "@/components/collections";
 import TopProduct from "@/components/topProduct";
 import Achievement from "@/components/achievement";

@@ -1,4 +1,5 @@
 "use client";
+import { ProductDataType } from "@/components/interfaces";
 import ProductHero from "@/components/producthero";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,17 +16,17 @@ async function getProducts() {
 export default async function Product() {
   const router = useRouter();
   let products = await getProducts();
-  
+
   return (
     <div className="">
-      <ProductHero/>
+      <ProductHero />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 bg-white pt-20">
         <div className="mx-auto max-w-2xl pb-16 sm:pb-24 lg:max-w-none lg:pb-32">
-        <p className="text-primary uppercase text-sm ">Product Store</p>
+          <p className="text-primary uppercase text-sm ">Product Store</p>
           <hr className="w-[4%] mb-2 bg-primary h-1 border-0" />
           <h2 className="text-3xl font-bold text-gray-900">All Collections</h2>
           <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-            {products?.map((obj) => {
+            {products?.map((obj: ProductDataType) => {
               return (
                 <div
                   key={obj.id}

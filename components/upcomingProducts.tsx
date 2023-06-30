@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ProductDataType } from "./interfaces";
 
 async function getProducts() {
   let res = await fetch(`https://fakestoreapi.com/products`);
@@ -24,22 +25,21 @@ export default async function UpcomingProducts() {
             Upcoming Products
           </h2>
           <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-            {upcomingProduct?.map((product) => {
+            {upcomingProduct?.map((product: ProductDataType) => {
               return (
                 <div
                   key={product.id}
                   className="w-full max-w-sm overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 mx-auto"
                 >
                   <div className="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
-                  
-                  <Image
-                    src={product.image}
-                    className="object-cover object-center w-full h-56"
-                    width={500}
-                    height={500}
-                    alt="Picture of the product"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-nature bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-50"></div>
+                    <Image
+                      src={product.image}
+                      className="object-cover object-center w-full h-56"
+                      width={500}
+                      height={500}
+                      alt="Picture of the product"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-nature bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-50"></div>
                   </div>
                   <div className="flex items-center px-6 py-3 bg-nature">
                     <svg
