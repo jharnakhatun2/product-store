@@ -1,9 +1,9 @@
 "use client";
 export default function Achievement() {
   return (
-    <section className="bg-gray-100">
-      <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-        <div className="mt-8 sm:mt-12">
+    <section className="bg-gray-100 mt-16">
+      <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 py-5">
+        <div className="">
           <dl className="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:divide-x sm:divide-white">
             <div className="flex flex-col px-4 py-8 text-center">
               <dt className="order-last text-sm lg:text-lg font-medium text-gray-500">
@@ -18,7 +18,7 @@ export default function Achievement() {
                 Products Strong
               </dt>
               <dd className="text-4xl lg:text-5xl font-extrabold text-nature">
-                100,000
+                10,000
               </dd>
             </div>
             <div className="flex flex-col px-4 py-8 text-center">

@@ -55,7 +55,7 @@ export default  function Product() {
                         ${obj.price}
                       </p>
                       <Link
-                        className="px-2 py-2 rounded text-gray-700 bg-secondary hover:bg-primary transition-all"
+                        className="px-2 py-2 rounded text-white bg-primary hover:bg-secondary transition-all"
                         href={`/product/${obj.id}`}
                       >
                         View Details

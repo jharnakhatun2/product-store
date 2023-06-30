@@ -33,7 +33,7 @@ export default function TopProduct() {
               <p className="text-primary uppercase text-sm ">Buying Methods</p>
               <hr className="w-[4%] mb-2 bg-primary h-1 border-0" />
               <h2 className="text-2xl font-bold sm:text-3xl">
-                How to buy products from our website :
+                How to buy products from our website
               </h2>
               <div>
                 <div className="py-4">
@@ -119,7 +119,7 @@ export default function TopProduct() {
                   </div>
                 </div>
               </div>
-              <div className="w-1/2 flex items-center px-2 py-2 rounded text-gray-700 bg-primary hover:bg-secondary transition-all ">
+              <div className="w-1/2 flex items-center px-2 py-2 rounded text-white bg-primary hover:bg-secondary transition-all ">
                 <Link className="mx-3 " href="/product">
                   BUY NOW
                 </Link>

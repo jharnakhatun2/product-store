@@ -15,7 +15,7 @@ export default async function UpcomingProducts() {
   const upcomingProduct = products.slice(11, 15);
   return (
     <div className="bg-white">
-      <div className="mx-auto max-w-7xl pt-0 lg:pt-44  px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl pt-0 lg:pt-52  px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl py-8  lg:max-w-none lg:py-16">
           <p className="text-primary uppercase text-sm ">
             Get Ready for Exciting
@@ -31,7 +31,7 @@ export default async function UpcomingProducts() {
                   key={product.id}
                   className="w-full max-w-sm overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 mx-auto"
                 >
-                  <div className="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
+                  <div className="relative overflow-hidden bg-cover bg-no-repeat">
                     <Image
                       src={product.image}
                       className="object-cover object-center w-full h-56"
